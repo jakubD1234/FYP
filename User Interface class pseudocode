@@ -1,0 +1,142 @@
+Pseudo code 
+User Interface class
+PROCEDURE UserInterface 
+Global Variables 
+JFrame = frame;
+JPanel = panel;
+JButton array = Buttons;
+JText = text;
+Integer buttoncount=0,questionnumber=0,
+String finalinput;
+
+	FUNCTION main  
+		Knowledgebase.savedata;
+		Initializeframe;
+		StartPanel;
+	END main 
+
+	
+	FUNCTION initializeframe
+		frame.setSize(800,640);
+		frame.setTitle("Chocolate Expert System");
+		frame.setResizable(false);
+		frame.add(panel);
+		frame.setVisible(true);
+	END initializeframe
+
+	FUNCTION StartPanel
+		addbutton(panel,200,50,150,(frame.getWidth()/2)-100,"start",0);
+		addbutton(panel,200,50,250,(frame.getWidth()/2)-100,"Solutions",6);
+		addbutton(panel,200,50,350,(frame.getWidth()/2)-100,"exit",5);  
+	END startpanel
+
+
+	FUNCTION BuySellQ()
+		panel.add(text);
+		Text.setFont ();
+		Text.setText("What action do you want to perform?");
+		Text.setSize(0, 10, 1000, 100);
+		addbutton(panel,200,70,100,0,"Buy",1);
+		addbutton(panel,200,70,100,200,"Sell",2);  
+	END BuySellQ
+
+
+
+	FUNCTION addbutton(JPanel Panell, int Width, int Height,int y,int x, String text, int ID){
+		Buttoncount add 1
+		Panell.add(buttons[buttoncount]);
+		Panell.add(buttons[buttoncount], BorderLayout.SOUTH);
+		buttons[buttoncount].SizePos(x, y, Width, Height);
+		buttons[buttoncount].setText(text);
+		buttons[buttoncount].setFont();
+		action(Panell,buttons[buttoncount],ID); 
+	END addbutton
+
+
+FUNCTION textchange(Integer num, Integer ID)
+
+		IF num=2 THEN 
+			buttonlocationchange;
+			text.setText("Whats is the product name?");
+			buttons[4].setText(Knowledgebase.ProductGetName());
+			buttons[5].setText(Knowledgebase.ProductGetName());				buttons[6].setText(Knowledgebase.ProductGetName());				buttons[7].setText(Knowledgebase.ProductGetName());
+
+		ELSE IF num=3 THEN
+			label.setText("What is the stock level of this product?");
+			buttons[4].setText(“LOW”);
+			buttons[5].setText(“Medium”);
+			buttons[6].setText("High”);
+			buttons[7].setText(“Very high/full”);
+			
+
+		ELSE IF num=4 THEN
+			label.setText("What is the season?");
+			buttons[4].setText(Knowledgebase.SeasonGetName());
+			buttons[5].setText(Knowledgebase.SeasonGetName());
+			buttons[6].setText(Knowledgebase.SeasonGetName());
+			buttons[7].setText(Knowledgebase.SeasonGetName());
+
+		ELSE IF num=5 THEN
+			FOR x 5 TO 8 DO{
+				buttons[x].setVisible(false);
+			END FOR 
+			buttons[4].setText("Return");
+			text.setText(InferenceEng.solution);	
+			FileS.write(InferenceEng.solution);
+		ELSE
+			frame.removeAll();
+			frame.repaint();
+		END IF
+	END textchange
+
+
+	FUNCTION buttonlocationchange(){
+		buttons[4].setSize(0,100,200,70);
+		buttons[5].setSize(200,100,200,70);
+		addbutton(startpanel,200,70,100,400,"",3);
+		addbutton(startpanel,200,70,100,600,"",4); 
+	END buttonlocationchange
+
+
+
+	
+
+
+
+
+
+
+
+
+
+FUNCTION action(JPanel panel,JButton name, Integer ID){
+		Name addActionListener{
+			START Listener 
+				IF ID=0 THEN
+					startpanel.removeAll();
+					startpanel.repaint();
+					BuySellQ();
+				ELSE IF ID=5
+					Exit system 
+				
+				ELSE IF ID=6
+					JOptionPane.showMessageDialog(null, FileS.read());
+				
+				ELSE IF qnum==5 THEN
+					initializebuttonarray();
+					buttoncount=0;
+					finalinput="";
+					qnum=1;
+					startpanel.removeAll();
+					startpanel.repaint();
+					startpanel();
+				ELSE 
+					qnum++;
+					finalinput+=ID;
+					textchange(qnum,ID);
+				END IF 		
+			END Listener  		
+	});
+END action 
+
+
