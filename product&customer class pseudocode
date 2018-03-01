@@ -1,0 +1,56 @@
+Product class 
+
+PROCEDURE product 
+	Integer ProductID;
+	String Pname;
+	Integer Averagequa;
+	String Season;
+	String ExpDate;
+	Integer quantity;
+	
+
+	FUNCTION product(Integer PRoductID, String ProductName, Integer  AverageQua, String season){
+		ProductID= PRoductID;
+		Pname=ProductName;
+		Averagequa= AverageQua;
+		Season=season;
+	END product
+
+
+	FUNTCTION String GetName
+		RETURN Pname
+	END GetName
+
+	FUNCTION Integer GetAverageOrder
+		RETURN Averagequa
+	END GetAverageOrder	
+	
+	FUNCTION Integer GetID
+		RETURN ProductID
+	END GetID
+END product 	
+
+
+Class customer
+
+PROCEDURE customer 
+
+	String customerName;
+	String address;
+	Integer orderproductID;
+
+	FUNCTION customer(String CustomerName, String Address, Integer OrderproductID){
+		customerName=CustomerName;
+     		address=Address;
+		orderproductID=OrderproductID;
+	END customer 
+
+	FUNCTION String GetName
+		RETURN customerName
+	END GetName	
+	
+	FUNCTION Integer GetOrderProduct
+		RETURN orderproductID
+	END GetOrderProduct	
+
+END customer 
