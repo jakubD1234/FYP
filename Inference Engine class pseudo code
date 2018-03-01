@@ -1,0 +1,86 @@
+Inference Engine class 
+PROCEDURE InferenceEng 
+FUNCTION Integer calcQuantity(char ID){		
+
+		Integer productnum= UserInterface. Finalinput chat at 1
+		Integer seasonnum= UserInterface. Finalinput chat at 3 		
+	IF ID='1' THEN
+		CalcQuaSize(productnum,seasonnum,'1',5);
+		CalcQuaSize(productnum,seasonnum,'2',5.5);
+		CalcQuaSize(productnum,seasonnum,'3',6);
+		CalcQuaSize(productnum,seasonnum,'4',6.5);
+	ELSE IF ID='2'THEN
+		CalcQuaSize(productnum,seasonnum,'1',4);
+		CalcQuaSize(productnum,seasonnum,'2',3.5);
+		CalcQuaSize(productnum,seasonnum,'3',3);
+		CalcQuaSize(productnum,seasonnum,'4',2.5);	
+	END IF
+RETURN(quantity);
+END calcQuantity 
+
+FUNCTION CalcQuaSize(int pnum,int snum,char val,double multi) {
+		IF UserInterface. Finalinput chat at 2=val THEN
+			quantity= ProductAverageOrder*StocklevelMultiplier*Season
+		END IF
+END CalcQuaSize
+
+
+
+
+
+
+
+FUNCTION String findcussup(Integer BuyOrSell) {
+		String supcus="";
+		Integer productnum= UserInterface. Finalinput chat at 1, ran;
+		Random n;
+		
+		IF BuyOrSell =1 THEN
+			FOR 1 TO 4 DO
+				IF (Product ID == Supplier popular product ID) THEN
+					supcus= Get Supplier name[y]							ELSE  
+					ran= Random Integer from 1 to 4
+					   supcus= Get Supplier name[ran]
+				END IF
+			END FOR 
+		ELSE IF BuyOrSell =2 THEN
+			FOR 1 TO 4 DO 
+				IF (Product ID == Supplier popular product ID) THEN
+					supcus= Get Customer Name[y]
+				ELSE 
+					supcus= Get Customer name[ran]
+				END IF
+			END FOR
+		END IF
+		RETURN supcus
+END findcussup
+
+	FUNCTION String solution
+
+		Integer productnum= UserInterface. Finalinput chat at 1
+		Integer QuantityBuy=(int) calcQuantity('1');
+		Integer QuantitySell=(int) calcQuantity('2');
+		
+		IF Frist char in finalinput ='1'THEN
+			answer="Buy QuantityBuy boxes of “product name” from findcussup(1);
+		ELSE
+			answer="Sell QuantitySell boxes of “product name” to findcussup(2);
+		}
+		RETURN answer	
+	END solution
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
