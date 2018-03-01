@@ -1,0 +1,51 @@
+Supplier class 
+
+PROCEDURE supplier 
+
+	String supplierName;
+	String address;
+	Integer popproductID;
+
+
+	FUNCTION supplier(String SupplierName, String Address, Integer PopproductID){
+		supplierName=SupplierName;
+		address=Address;
+		popproductID=PopproductID;
+	END supplier
+
+
+	FUNCTION String GetName
+		RETURN supplierName
+	END GetName
+	
+	FUNCTION Integer GetPopProduct
+		RETURN popproductID
+	END GetPopProduct
+END supplier
+
+
+
+Season class 
+
+PROCEDURE season
+
+	String seasonName;
+	
+	double quantitymulti;
+	
+
+	FUNCTION Season(String SupplierName, double qualityMulti){
+		seasonName=SupplierName;
+		quantitymulti=qualityMulti;
+	END Season 
+	
+	FUNCTION String GetName
+		RETURN seasonName
+	END GetName
+	
+	FUNCTION double GetPopMultiplier(){
+		RETURN quantitymulti
+	END GetPopMultiplier
+END season 
+
+
