@@ -1,0 +1,56 @@
+Knowledge base class
+
+PROCEDURE Knowledgebase 
+
+	
+	ARRAY productarray of type product 	
+ARRAY customerarray of type customer
+	ARRAY supplierarray of type supplier
+	ARRAY seasonarray of type season
+
+
+	FUNCTION products
+		productarray[1]= product(ID1,Name,AverageOrder,Season);
+		productarray[2]= product(ID2,Name,AverageOrder,Season);
+		productarray[3]= product(ID3,Name,AverageOrder,Season);
+		productarray[4]= product(ID4,Name,AverageOrder,Season);
+	END products
+
+	
+	FUNCTION customers
+		customerarray[1]= customer(Name,Address,PopularOrder);
+		customerarray[2]= customer(Name,Address,PopularOrder);
+		customerarray[3]= customer(Name,Address,PopularOrder);
+		customerarray[4]= customer(Name,Address,PopularOrder);	 
+	END customers
+
+
+FUNCTION suppliers
+					      supplierarray[1]=supplier(Name,Address,PopularOrder);
+		supplierarray[2]= supplier(Name,Address,PopularOrder);
+		supplierarray[3]= supplier(Name,Address,PopularOrder);
+		supplierarray[4]= supplier(Name,Address,PopularOrder);	 
+	END suppliers
+
+
+	FUNCTION seasons
+		seasonarray[1]= Season(SeasonName,PopularityLevel);
+		seasonarray[2]= Season(SeasonName,PopularityLevel);
+		seasonarray[3]= Season(SeasonName,PopularityLevel);
+		seasonarray[4]= Season(SeasonName,PopularityLevel);
+	END seasons
+	
+
+	FUNCTION savedata
+		products;
+		customers;
+		suppliers;
+		seasons;
+	END savedata
+	
+
+END knowledgebase 
+
+
+
+
