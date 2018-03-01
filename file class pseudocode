@@ -1,0 +1,39 @@
+Files class 
+
+PROCEDURE files 
+
+
+	FUNCTION write(String text)
+		
+		Date d;
+				
+		  DO
+			  FileWriter fstream(“c\Address”);
+			  BufferedWriter out;
+			  Out write(text+d));
+			  Out newLine();
+			  Out close();
+		  ELSE
+			 	OUTPUT File not found 
+		 
+		  END DO
+	END write 
+
+
+
+	FUNCTION String read(){
+		String text="<html>";
+
+		File test = new File(“c\Address”)
+		DO
+			Scanner input;
+			WHILE input.hasNextLine() 
+				text+= Input text 
+			END WHILE 
+		ELSE
+			OUTPUT File not found
+		END DO
+		text+="</html>";
+		RETURN text
+	END read
+
