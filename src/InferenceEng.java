@@ -12,10 +12,10 @@ public class InferenceEng {
 		int seasonnum=Character.getNumericValue(UserInterface.finalinput.charAt(3));
 		
 		if(ID=='1'){
-			CalcQua(productnum,seasonnum,'1',5);
-			CalcQua(productnum,seasonnum,'2',5.5);
-			CalcQua(productnum,seasonnum,'3',6);
-			CalcQua(productnum,seasonnum,'4',6.5);
+			CalcQua(productnum,seasonnum,'1',6.5);
+			CalcQua(productnum,seasonnum,'2',6);
+			CalcQua(productnum,seasonnum,'3',5.5);
+			CalcQua(productnum,seasonnum,'4',5);
 		}else if(ID=='2'){
 			CalcQua(productnum,seasonnum,'1',4);
 			CalcQua(productnum,seasonnum,'2',3.5);
