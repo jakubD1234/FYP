@@ -1,10 +1,9 @@
-
 import java.util.Random;
 
 public class InferenceEng {	
 
 	static double quantity=0;
-	static String answer;
+	static String answer;	
 	public static double calcQuantity(char ID){		
 
 		int productnum=Character.getNumericValue(UserInterface.finalinput.charAt(1));
@@ -34,14 +33,15 @@ public class InferenceEng {
 	public static String findcussup(int ID) {
 		String supcus="";
 		int productnum=Character.getNumericValue(UserInterface.finalinput.charAt(1)), ran;
+                boolean found=false;
 		Random n = new Random();
 		
 		if(ID==1) {
 			for(int y=1;y<5;y++) {
-				if(Knowledgebase.productarray[productnum].GetID()==Knowledgebase.supplierarray[y].GetPopProduct()) {
+				if(Knowledgebase.productarray[productnum].GetID()==Knowledgebase.supplierarray[y].GetPopProduct() && !found) {
+					found=true;
 					supcus=Knowledgebase.supplierarray[y].GetName();
-					System.out.println("wat");
-				}else {
+				}else if(!found){
 					ran=n.nextInt(3);
 					supcus=Knowledgebase.supplierarray[ran+1].GetName();
 				}
@@ -49,10 +49,10 @@ public class InferenceEng {
 		}else if(ID==2){
 		
 			for(int y=1;y<5;y++) {
-				if(Knowledgebase.productarray[productnum].GetID()==Knowledgebase.customerarray[y].GetOrderProduct()) {
+				if(Knowledgebase.productarray[productnum].GetID()==Knowledgebase.customerarray[y].GetOrderProduct() && !found) {
+					found=true;
 					supcus=Knowledgebase.customerarray[y].GetName();
-					System.out.println("wat");
-				}else {
+				}else(!found) {
 					ran=n.nextInt(3);
 					supcus=Knowledgebase.customerarray[ran+1].GetName();
 				}
