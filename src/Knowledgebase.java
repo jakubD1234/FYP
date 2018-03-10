@@ -33,10 +33,10 @@ public class Knowledgebase {
 
 	
 	public static void seasons(){
-		seasonarray[1]= new Season("First Term",1.4);
-		seasonarray[2]= new Season("Second Term",1.2);
-		seasonarray[3]= new Season("Third Term",3.1);
-		seasonarray[4]= new Season("Fourth Term",5.2);	 
+		seasonarray[1]= new Season("First Term",0.5);
+		seasonarray[2]= new Season("Second Term",0.7);
+		seasonarray[3]= new Season("Third Term",1.1);
+		seasonarray[4]= new Season("Fourth Term",1.3);	 
 	}
 	
 
