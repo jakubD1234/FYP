@@ -11,15 +11,15 @@ public class InferenceEng {
 		int seasonnum=Character.getNumericValue(UserInterface.finalinput.charAt(3));
 		
 		if(ID=='1'){
-			CalcQua(productnum,seasonnum,'1',6.5);
+			CalcQua(productnum,seasonnum,'1',6.5);//low quantity
 			CalcQua(productnum,seasonnum,'2',6);
 			CalcQua(productnum,seasonnum,'3',5.5);
-			CalcQua(productnum,seasonnum,'4',5);
+			CalcQua(productnum,seasonnum,'4',5);// Very high quantity
 		}else if(ID=='2'){
-			CalcQua(productnum,seasonnum,'1',4);
-			CalcQua(productnum,seasonnum,'2',3.5);
-			CalcQua(productnum,seasonnum,'3',3);
-			CalcQua(productnum,seasonnum,'4',2.5);	
+			CalcQua(productnum,seasonnum,'1',2.5);//low quantity
+			CalcQua(productnum,seasonnum,'2',3);
+			CalcQua(productnum,seasonnum,'3',3.5);
+			CalcQua(productnum,seasonnum,'4',4);// Very high quantity
 		}
 	return(quantity);
 	}
